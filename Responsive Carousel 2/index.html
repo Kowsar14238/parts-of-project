@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Rotator</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <!-- Image slider container -->
+    <div class="slide hi-slide">
+        <!-- Previous and Next buttons -->
+        <button class="hi-prev">Prev</button>
+        <button class="hi-next">Next</button>
+        <!-- List of images -->
+        <ul>
+            <li><img src="./images/Avocado.jpg" alt=""></li>
+            <li><img src="./images/Blueberry.jpg" alt=""></li>
+            <li><img src="./images/Kiwi.jpg" alt=""></li>
+            <li><img src="./images/Rambutan.jpg" alt=""></li>
+            <li><img src="./images/strawberry.jpg" alt=""></li>
+            <li><img src="./images/Apple.jpg" alt=""></li>
+            <li><img src="./images/Cherrie.jpg" alt=""></li>
+            <li><img src="./images/Grape.jpg" alt=""></li>
+            <li><img src="./images/Guava.jpg" alt=""></li>
+        </ul>
+    </div>
+
+    <!-- JavaScript and jQuery dependencies -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="./js/script.js"></script>
+
+    <!-- Initialize the image slider when the document is ready -->
+    <script>
+        $(document).ready(function () {
+            $('.slide').hiSlide();
+        });
+    </script>
+</body>
+</html>

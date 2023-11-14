@@ -1,0 +1,88 @@
+/* Reset margin and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set background image for the body and specify background size as 'cover' */
+body {
+    background-image: url(../images/Background.jpg);
+    background-size: cover;
+}
+
+/* Style for the image slider container */
+.hi-slide {
+    position: relative;
+    width: 754px;
+    height: 292px;
+    border-radius: 50px;
+    margin: 115px auto 0;
+}
+
+/* Style for the previous and next buttons */
+.hi-slide .hi-next,
+.hi-slide .hi-prev {
+    position: absolute;
+    top: 50%;
+    width: 80px;
+    height: 40px;
+    margin-top: -20px;
+    border-radius: 50px;
+    line-height: 40px;
+    text-align: center;
+    cursor: pointer;
+    background-color: #fff;
+    color: #000;
+    transition: all 0.75s;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Style for the previous and next buttons on hover */
+.hi-slide .hi-next:hover,
+.hi-slide .hi-prev:hover {
+    opacity: 1;
+    background-color: #3158c4;
+}
+
+/* Position the previous button to the left */
+.hi-slide .hi-prev {
+    left: -12%;
+}
+
+/* Position the next button to the right */
+.hi-slide .hi-next {
+    right: -12%;
+}
+
+/* Style for the list of images */
+.hi-slide > ul {
+    list-style: none;
+    position: relative;
+    width: 754px;
+    height: 292px;
+    margin: 0;
+    padding: 0;
+}
+
+/* Style for individual image list items */
+.hi-slide > ul > li {
+    overflow: hidden;
+    position: absolute;
+    z-index: 0;
+    left: 377px;
+    width: 0;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border: 3px solid #3d69d0;
+    cursor: pointer;
+    background-color: #ffffff;
+}
+
+/* Style for the images within list items */
+.hi-slide > ul > li > img {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+}
