@@ -1,0 +1,119 @@
+/* Resetting styles and setting default font */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    background-color: #f3f3f3;
+}
+
+.wrapper{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* Container for the image cards */
+.container{
+    height: 30rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    transition: all .3s ease;
+}
+.container label:hover{
+    transform: translateY(-2rem);
+}
+/* Styling for each image card */
+.card{
+    width: 110px;
+    height: 550px;
+    border-radius: .75rem;
+    background-size: cover;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 2rem;
+    margin: 0px 10px;
+    display: flex;
+    align-items: flex-end;
+    transition: .6s cubic-bezier(.28, -0.03, 0, .99);/* cubic-bezier(x1,y1,x2,y2) is co-ordinates of the shape */
+    box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.8);/* box-shadow: [horizontal offset] [vertical offset] [blur radius] [spread radius] [color] */
+}
+/* Styling for the content row inside the image card */
+.card .row{
+    color: #fff;
+    display: flex;
+    flex-wrap: nowrap;
+}
+/* Styling for the icon in the image card */
+.card .row .icon{
+    background: #473d3d;
+    color: #fff;
+    border-radius: 50%;
+    width: 55px;
+    font-size: larger;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+}
+/* Styling for the description in the image card */
+.card .row .description{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background: rgb(0, 0, 0, 0.7);
+    padding-left: .2rem ;
+    overflow: hidden;
+    height: 80px;
+    width: 450px;
+    opacity: 0;/*
+    transform: translateY(10px);*/
+    transition-delay: .3s;
+    transition: all .3s ease;
+}
+.description h4{
+    font-size: 1.3rem;
+    text-align: center;
+    color: #dad7d7;
+    text-transform: uppercase;
+}
+.description p{
+    color: #c3c0c0;
+    padding-top: 5px;
+}
+/* Input element is hidden */
+input{
+    display: none;
+}
+/* When the input is checked, increase the width of the corresponding label */
+input:checked + label{
+    width: 600px;
+}
+/* When the input is checked, make the description visible */
+input:checked + label .description{
+    opacity: 1 !important;
+}
+.card[for="c1"]{
+    background-image: url(../images/item-1.jpg);
+}
+.card[for="c2"]{
+    background-image: url(../images/item-2.jpg);
+}
+.card[for="c3"]{
+    background-image: url(../images/item-3.jpg);
+}
+.card[for="c4"]{
+    background-image: url(../images/item-4.jpg);
+}
+.card[for="c5"]{
+    background-image: url(../images/item-5.jpg);
+}
+.card[for="c6"]{
+    background-image: url(../images/item-6.jpg);
+}
+
+
