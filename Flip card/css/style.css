@@ -1,0 +1,137 @@
+/**Reset styles for all elements**/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/**Styles for the main container of flip cards**/
+.flip-card-body{
+    height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(45deg, #061de3, #e306);
+    color: rgb(212, 212, 212);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+}
+/**Styles for the flip card container**/
+.flip-card-container{
+    width: 22rem;
+    height: 31.5rem;
+    perspective: 50rem; /*Give 3D effect when card flip*/
+}
+/**Styles for the main flip card element**/
+.flip-main-card{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    transition: transform 1.5s;
+    transform-style: preserve-3d;
+}
+/**Flip the card when container is hovered**/
+.flip-card-container:hover .flip-main-card{
+    cursor: pointer;
+    transform: rotateY(180deg) rotateZ(180deg);
+}
+/**Styles for both front and back faces of the flip card**/
+.flip-card-front, .flip-card-back{
+    height: 100%;
+    width: 100%;
+    border-radius: 2rem;
+    box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25);
+    position: absolute;
+    backface-visibility: hidden;
+}
+/**Rest of the styles for the back face of the flip card**/
+.flip-card-back{
+    background: #3a3a3a;
+    transform: rotateY(180deg) rotateZ(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding-left: 1rem;
+}
+
+/**Background images for front faces of flip cards**/
+.flip-card-front-bg-1{
+    background: url(../images/chicken-fry.jpg) no-repeat;
+    background-size: cover;
+}
+.flip-card-front-bg-2{
+    background: url(../images/fish-fry.jpg) no-repeat;
+    background-size: cover;
+}
+.flip-card-front-bg-3{
+    background: url(../images/Beef-Curry.jpg) no-repeat;
+    background-size: cover;
+}
+
+
+/*---=== Media Queries ===---*/
+
+@media(max-width:1140px){
+        
+    .flip-card-container{
+        width: 18rem;
+        height: 28rem;
+    }
+    .flip-card-back h1{
+        font-size: 1.6rem;
+        text-align: center;
+    }
+}
+@media(max-width:965px){
+    .flip-card-body{
+        gap: 1.5rem;
+    }
+    .flip-card-container{
+        width: 14rem;
+        height: 25.6rem;
+    }
+    .flip-card-back h1{
+        font-size: 1.2rem;
+    }
+}
+@media(max-width:735px){
+    .flip-card-body{
+        gap: 1.2rem;
+    }
+    .flip-card-container{
+        width: 11.3rem;
+        height: 24rem;
+    }
+}
+@media(max-width:595px){
+    .flip-card-container{
+        width: 9rem;
+        height: 22.8rem;
+    }
+}
+@media(max-width:480px){
+    .flip-card-container{
+        width: 8rem;
+        height: 21.8rem;
+    }
+    .flip-card-back h1{
+        font-size: 1rem;
+    }
+}
+@media(max-width:430px){
+    .flip-card-body{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: .5rem;
+    }
+    .flip-card-container{
+        width: 8.5rem;
+        height: 21.8rem;
+    }
+    .flip-card-back h1{
+        font-size: 1rem;
+    }
+}
