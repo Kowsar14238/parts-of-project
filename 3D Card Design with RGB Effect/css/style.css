@@ -1,0 +1,197 @@
+/****/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/****/
+.rgb-card-body{
+    height: 100vh;
+    background: #e4e1e1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    overflow: hidden;    
+    font-family: roboto;
+}
+/****/
+.rgb-card{
+    display: grid;
+    grid-template-columns: 19rem;
+    grid-template-rows: 15.2rem 15.6rem 5rem;
+    grid-template-areas: "image" "text" "stats";
+    border-radius: 1.2rem;
+    background: #1d1d1d;
+    color: #fff;
+    box-shadow: .31rem .31rem .5rem rgba(0,0,0,0.9);
+    text-align: center;
+    cursor: pointer;
+    margin: 30px;
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+}
+/* Add style for tilt effect */
+.rgb-card:hover {
+    transform: scale(1.15) rotateX(8deg) rotateY(8deg);
+    box-shadow: 0.31rem 0.31rem 0.5rem rgba(0, 0, 0, 0.6);
+}
+/* Reset tilt effect on mouse leave */
+.rgb-card:not(:hover) {
+    transform: none;
+}
+.rgb-effect::after{
+    content: "";
+    background: linear-gradient(45deg,
+    #ff0000 0%,
+    #ff9a00 10%,
+    #d0de21 20%,
+    #4fdc4a 30%,
+    #3fdad8 40%,
+    #2fc9e2 50%,
+    #1c7fee 60%,
+    #5f15f2 70%,
+    #ba0cf8 80%,
+    #fb07d9 90%,
+    #ff0000 100%)
+    repeat 0% 0% / 300% 100%;
+    position: absolute;
+    inset: -3px;
+    border-radius: 15px;
+    filter: blur(8px);
+    transform: translateZ(-1px); /* or z-index */
+    animation: rgb 6s linear infinite;
+}
+@keyframes rgb{
+    0% { background-position: 0% 50%;}
+    50% { background-position: 100% 50%;}
+    100% { background-position: 0% 50%;}
+}
+/****/
+.rgb-card-image-1{
+    background: linear-gradient(#fff0 0%, #fff0 70%, #1d1d1d 100%), url(../images/chicken-fry.jpg);
+}
+.rgb-card-image-2{
+    background: linear-gradient(#fff0 0%, #fff0 70%, #1d1d1d 100%), url(../images/fish-fry.jpg);
+}
+.rgb-card-image-3{
+    background: linear-gradient(#fff0 0%, #fff0 70%, #1d1d1d 100%), url(../images/Beef-Curry.jpg);
+}
+/****/
+.rgb-card-image{
+    grid-area: image;
+    background-size: cover;
+    border-top-right-radius: .95rem;
+    border-top-left-radius: .95rem;
+}
+/****/
+.rgb-card-text{
+    grid-area: text;
+    margin: 1.6rem;
+}
+/****/
+.rgb-card-text .rgb-card-date{
+    color: rgba(255, 7, 110);
+    font-size: .85rem;
+}
+/****/
+.rgb-card-text p{
+    color: #808080;
+    font-size: .95rem;
+    font-weight: 300;
+}
+/****/
+.rgb-card-stats{
+    grid-area: stats;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    background: rgba(255, 7, 110);    
+    border-bottom-right-radius: .95rem;
+    border-bottom-left-radius: .95rem;
+}
+/****/
+.rgb-card-stats .border{
+    border-left: 1px solid rgba(172, 26, 87);
+    border-right: 1px solid rgba(172, 26, 87);
+}
+/****/
+.rgb-each-card-stats{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: .65rem;
+    color: #fff;
+}
+/****/
+.rgb-each-card-stats .type{
+    font-size: 0.7rem;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+/****/
+.rgb-each-card-stats .value{
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+/****/
+.rgb-each-card-stats .value sup{
+    font-size: .75rem;
+}
+
+
+
+
+/*---=== Media Queries ===---*/
+/*
+@media(max-width:1140px){
+        
+    .flip-card-container{
+        width: 18rem;
+        height: 28rem;
+    }
+}
+@media(max-width:965px){
+    .flip-card-body{
+        gap: 1.5rem;
+    }
+    .flip-card-container{
+        width: 14rem;
+        height: 25.6rem;
+    }
+}
+@media(max-width:735px){
+    .flip-card-body{
+        gap: 1.2rem;
+    }
+    .flip-card-container{
+        width: 11.3rem;
+        height: 24rem;
+    }
+}
+@media(max-width:595px){
+    .flip-card-container{
+        width: 9rem;
+        height: 22.8rem;
+    }
+}
+@media(max-width:480px){
+    .flip-card-container{
+        width: 8rem;
+        height: 21.8rem;
+    }
+}
+@media(max-width:430px){
+    .flip-card-body{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: .5rem;
+    }
+    .flip-card-container{
+        width: 8.5rem;
+        height: 21.8rem;
+    }
+}
