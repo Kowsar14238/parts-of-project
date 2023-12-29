@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Card With Quick View || Product Preview Popup Effect</title>
+
+    <!--Font awesome cnd link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!--CSS-->
+    <link rel="stylesheet" href="./css/style.css">
+    <!--JS-->
+    <script src="./js/script.js" defer></script>
+
+</head>
+<body>
+    <div class="container">
+        
+        <h1 class="title">Organic Foods</h1>
+
+        <div class="product-container">
+
+            <div class="product" data-name="p-1">
+                <img src="./images/carrot.png" alt="">
+                <h3>carrot</h3>
+                <div class="price">80tk || per kg</div>
+            </div>
+
+            <div class="product" data-name="p-2">
+                <img src="./images/cauliflower.png" alt="">
+                <h3>cauliflower</h3>
+                <div class="price">30tk || per kg</div>
+            </div>
+
+            <div class="product" data-name="p-3">
+                <img src="./images/garlic.png" alt="">
+                <h3>garlic</h3>
+                <div class="price">130tk || per kg</div>
+            </div>
+
+            <div class="product" data-name="p-4">
+                <img src="./images/ginger.png" alt="">
+                <h3>ginger</h3>
+                <div class="price">180tk || per kg</div>
+            </div>
+
+            <div class="product" data-name="p-5">
+                <img src="./images/onion.png" alt="">
+                <h3>onion</h3>
+                <div class="price">50tk || per kg</div>
+            </div>
+
+            <div class="product" data-name="p-6">
+                <img src="./images/pineapple.png" alt="">
+                <h3>pineapple</h3>
+                <div class="price">15tk || per kg</div>
+            </div>
+
+            <div class="product" data-name="p-7">
+                <img src="./images/potato.png" alt="">
+                <h3>potato</h3>
+                <div class="price">65tk || per kg</div>
+            </div>
+
+            <div class="product" data-name="p-8">
+                <img src="./images/strawberry.jpg" alt="">
+                <h3>strawberry</h3>
+                <div class="price">350tk || per kg</div>
+            </div>
+
+            <div class="product" data-name="p-9">
+                <img src="./images/tomato.jpg" alt="">
+                <h3>tomato</h3>
+                <div class="price">80tk || per kg</div>
+            </div>
+
+        </div>
+        
+
+        <div class="products-preview">
+
+            <div class="preview active" data-target="p-1">
+                <i class="fas fa-times"></i>
+                <img src="./images/carrot.png" alt="">
+                <h3>organic carrot</h3>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                    <span>( 250 )</span>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A repudiandae dolor sint commodi exercitationem consectetur?</p>
+    
+                <div class="price">80tk || per kg</div>
+    
+                <div class="price buttons">
+                    <a href="#" class="buy">buy now</a>
+                    <a href="#" class="cart">add to cart</a>
+                </div>
+            </div>
+    
+            <div class="preview" data-target="p-2">
+                <img src="./images/cauliflower.png" alt="">
+                <h3>organic cauliflower</h3>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                    <span>( 250 )</span>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A repudiandae dolor sint commodi exercitationem consectetur?</p>
+    
+                <div class="price">80tk || per kg</div>
+    
+                <div class="price buttons">
+                    <a href="#" class="buy">buy now</a>
+                    <a href="#" class="cart">add to cart</a>
+                </div>
+            </div>
+    
+            <div class="preview" data-target="p-3">
+                <img src="./images/garlic.png" alt="">
+                <h3>organic garlic</h3>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                    <span>( 250 )</span>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A repudiandae dolor sint commodi exercitationem consectetur?</p>
+    
+                <div class="price">80tk || per kg</div>
+    
+                <div class="price buttons">
+                    <a href="#" class="buy">buy now</a>
+                    <a href="#" class="cart">add to cart</a>
+                </div>
+            </div>
+    
+            <div class="preview" data-target="p-4">
+                <img src="./images/ginger.png" alt="">
+                <h3>organic ginger</h3>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                    <span>( 250 )</span>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A repudiandae dolor sint commodi exercitationem consectetur?</p>
+    
+                <div class="price">80tk || per kg</div>
+    
+                <div class="price buttons">
+                    <a href="#" class="buy">buy now</a>
+                    <a href="#" class="cart">add to cart</a>
+                </div>
+            </div>
+    
+            <div class="preview" data-target="p-5">
+                <img src="./images/onion.png" alt="">
+                <h3>organic onion</h3>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                    <span>( 250 )</span>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A repudiandae dolor sint commodi exercitationem consectetur?</p>
+    
+                <div class="price">80tk || per kg</div>
+    
+                <div class="price buttons">
+                    <a href="#" class="buy">buy now</a>
+                    <a href="#" class="cart">add to cart</a>
+                </div>
+            </div>
+    
+            <div class="preview" data-target="p-6">
+                <img src="./images/pineapple.png" alt="">
+                <h3>organic pineapple</h3>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                    <span>( 250 )</span>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A repudiandae dolor sint commodi exercitationem consectetur?</p>
+    
+                <div class="price">80tk || per kg</div>
+    
+                <div class="price buttons">
+                    <a href="#" class="buy">buy now</a>
+                    <a href="#" class="cart">add to cart</a>
+                </div>
+            </div>
+    
+            <div class="preview" data-target="p-7">
+                <img src="./images/potato.png" alt="">
+                <h3>organic potato</h3>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                    <span>( 250 )</span>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A repudiandae dolor sint commodi exercitationem consectetur?</p>
+    
+                <div class="price">80tk || per kg</div>
+    
+                <div class="price buttons">
+                    <a href="#" class="buy">buy now</a>
+                    <a href="#" class="cart">add to cart</a>
+                </div>
+            </div>
+    
+            <div class="preview" data-target="p-8">
+                <img src="./images/strawberry.jpg" alt="">
+                <h3>organic strawberry</h3>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                    <span>( 250 )</span>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A repudiandae dolor sint commodi exercitationem consectetur?</p>
+    
+                <div class="price">80tk || per kg</div>
+    
+                <div class="price buttons">
+                    <a href="#" class="buy">buy now</a>
+                    <a href="#" class="cart">add to cart</a>
+                </div>
+            </div>
+    
+            <div class="preview" data-target="p-9">
+                <img src="./images/tomato.jpg" alt="">
+                <h3>organic tomato</h3>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                    <span>( 250 )</span>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A repudiandae dolor sint commodi exercitationem consectetur?</p>
+    
+                <div class="price">80tk || per kg</div>
+    
+                <div class="price buttons">
+                    <a href="#" class="buy">buy now</a>
+                    <a href="#" class="cart">add to cart</a>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+</body>
+</html>

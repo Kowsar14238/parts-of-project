@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Merriweather:wght@300&family=Nunito:wght@200;300;400;500;600&family=Poppins:ital,wght@0,200;0,300;0,400;1,200;1,300&family=Roboto:wght@100;300;400;500;700&display=swap');
+
+*{
+    font-family: 'Nunito', sans-serif;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: ease 0.3s all;
+    text-transform: capitalize;
+}
+
+body{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    background: #edebeb;
+}
+.container{
+    width: 100%;
+    margin: 0 auto;
+    padding: 2%;
+}
+.container .title{
+    font-size: 3rem;
+    color: #333333;
+    margin-bottom: 5%;
+    text-align: center;
+    text-transform: uppercase;
+}
+.container .product-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(29rem, 1fr));
+    gap: 2rem;
+}
+.container .product-container .product{
+    text-align: center;
+    padding: 3%;
+    background: #fff;
+    box-shadow: 0 0.5rem 1rem rgb(0, 0, 0, 0.1);
+    outline: 0.1rem solid #ccc;
+    outline-offset: -1.5rem;
+    cursor: pointer;
+}
+.container .product-container .product:hover{
+    outline: .2rem solid #222;
+    outline-offset: 0rem;
+}
+.container .product-container .product img{
+    height: 25rem;
+    /* transform: scale(.7); */
+}
+.container .product-container .product:hover img{
+    transform: scale(.9);
+}
+.container .product-container .product h3{
+    padding: .5rem 0rem;
+    font-size: 2rem;
+    color: #444;
+}
+.container .product-container .product:hover h3{
+    color: #2acb5a;
+}
+.container .product-container .product .price{
+    font-size: 1.8rem;
+    color: #2acb5a;
+    margin-bottom: 4%;
+}
+.container .product-container .product:hover .price{
+    color: #444;
+}
+
+.products-preview{
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-height: 100vh;
+    width: 100%;
+    background: rgb(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.products-preview .preview{
+    display: none;
+    padding: 2rem;
+    text-align: center;
+    background: #fff;
+    position: relative;
+    margin: 2rem;
+    width: 40rem;
+}
+.products-preview .preview.active{
+    display: inline-block;
+}
+.products-preview .preview img{
+    height: 30rem;
+}
+.products-preview .preview .fa-times{
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    cursor: pointer;
+    color: #444;
+    font-size: 2rem;
+}
+.products-preview .preview .fa-times:hover{
+    transform: rotate(90deg);
+}
